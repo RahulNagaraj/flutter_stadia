@@ -16,7 +16,7 @@ class AvatarWidget extends StatelessWidget {
       this.isOnline = false,
       this.showRanking = false,
       this.name = "",
-      @required this.ranking,
+      this.ranking,
       @required this.imagePath})
       : super(key: key);
 

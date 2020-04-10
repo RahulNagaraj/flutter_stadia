@@ -13,4 +13,6 @@ final friends = [
   Friend(name: 'Cersei', imagePath: friend_cersei,  isOnline: false),
   Friend(name: 'Bran', imagePath: friend_bran,  isOnline: false),
   Friend(name: 'Arya', imagePath: friend_arya,  isOnline: true),
+  Friend(name: 'Daneyrs', imagePath: friend_daneyrs,  isOnline: false),
+  Friend(name: 'Jamie', imagePath: friend_jamie,  isOnline: true),
 ];
