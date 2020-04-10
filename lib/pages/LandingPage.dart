@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../pages/secondary_home_page.dart';
 import '../models/friends.dart';
 import '../common/last_played_game_tile_widget.dart';
 import '../models/last_plyed_game.dart';
@@ -59,19 +60,29 @@ class LandingPage extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
                           child: Row(
                             children: <Widget>[
-                              AvatarWidget(
-                                imagePath: player1,
-                                isOnline: true,
-                                showRanking: true,
-                                ranking: 10,
+                              InkWell(
+                                child: AvatarWidget(
+                                  imagePath: player1,
+                                  isOnline: true,
+                                  showRanking: true,
+                                  ranking: 10,
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              SecondaryHomePage()));
+                                },
                               ),
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 16.0),
                                 child: RichText(
                                   text: TextSpan(children: [
                                     TextSpan(
-                                        text: 'Hello', style: userNameTextStyle),
+                                        text: 'Hello',
+                                        style: userNameTextStyle),
                                     TextSpan(text: '\n'),
                                     TextSpan(
                                         text: 'Jon Snow',
@@ -127,7 +138,6 @@ class LandingPage extends StatelessWidget {
                         ContentHeadingWidget(
                           heading: 'Friends',
                         ),
-
                       ],
                     ),
                   ),

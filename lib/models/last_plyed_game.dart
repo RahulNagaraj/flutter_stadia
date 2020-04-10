@@ -18,8 +18,9 @@ final lastPlayedGames = [
 
 final popularWithFriends = [
   game_pubg,
-  game_monument_valley,
   game_fortnite,
   game_apex,
-  game_altos,
+  game_clash_royale,
+  game_asphalt,
+  game_minecraft
 ];
